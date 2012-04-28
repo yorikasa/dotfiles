@@ -1,0 +1,1 @@
+/Users/yuki/.bash_profile
