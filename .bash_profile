@@ -12,3 +12,6 @@ fi
 
 # Aliases
 alias ll='ls -la'
+
+# Command Options
+export GREP_OPTIONS='--color=auto'
