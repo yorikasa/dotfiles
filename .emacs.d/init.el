@@ -17,7 +17,7 @@
 (define-key global-map (kbd "C-x ?") 'help-command)
 (define-key global-map [(super w)] 'kill-buffer)
 (define-key global-map (kbd "RET") 'newline-and-indent)
-
+(define-key global-map (kbd "C-t") 'other-window)
 
 ;; Tab width
 (setq-default tab-width 4)
