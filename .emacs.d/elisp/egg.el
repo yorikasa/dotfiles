@@ -83,7 +83,7 @@ Many Egg faces inherit from this one by default."
   '((((class color) (background light))
      :foreground "navy" :inherit variable-pitch)
     (((class color) (background dark))
-     :foreground "SteelBlue")
+     :foreground "grey45")
     (t))
   "Face for description text."
   :group 'egg-faces)
