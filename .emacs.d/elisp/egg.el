@@ -73,7 +73,7 @@
   :group 'egg)
 
 (defface egg-header
-  '((t :weight bold :inherit variable-pitch :height 1.1))
+  '((t :weight bold :height 1.1))
   "Face for generic headers.
 
 Many Egg faces inherit from this one by default."
@@ -83,7 +83,7 @@ Many Egg faces inherit from this one by default."
   '((((class color) (background light))
      :foreground "navy" :inherit variable-pitch)
     (((class color) (background dark))
-     :foreground "SteelBlue" :inherit variable-pitch)
+     :foreground "SteelBlue")
     (t))
   "Face for description text."
   :group 'egg-faces)
