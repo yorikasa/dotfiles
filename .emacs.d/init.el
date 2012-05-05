@@ -19,6 +19,11 @@
 (define-key global-map (kbd "RET") 'newline-and-indent)
 (define-key global-map (kbd "C-t") 'other-window)
 
+
+;; Fix Enter key issue in ansi-term
+(add-hook 'term-mode-hook
+		  #'(lambda () (setq autopair-dont-activate t)))
+
 ;; Tab width
 (setq-default tab-width 4)
 (setq c-basic-offset 4)
@@ -61,7 +66,7 @@
 ;; For Terminal
 (unless window-system
   (global-hl-line-mode 1)
-  (set-face-background hl-line-face "#eeeeee")
+  (set-face-background hl-line-face "#111111")
   (menu-bar-mode 0)
   )
 
@@ -106,7 +111,7 @@
 ;; auto-install.el -------------------------------------------------------------
 (require 'auto-install)
 (setq auto-install-directory "~/.emacs.d/elisp/")
-(auto-install-update-emacswiki-package-name t)
+;(auto-install-update-emacswiki-package-name 0)
 ;; (setq url-proxy-services '(("http" . "squid.smile.priv:8080")))
 ; (auto-install-compatibility-setup)
 
@@ -188,7 +193,8 @@
 ;; Egg (Git): https://github.com/byplayer/egg ----------------------------------
 (when (executable-find "git")
   (require 'egg nil t))
-
+(setq egg-auto-update nil)
+(setq egg-switch-to-buffer nil)
 
 ;; Modes =======================================================================
 
