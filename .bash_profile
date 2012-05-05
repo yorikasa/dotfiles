@@ -12,6 +12,8 @@ fi
 
 # Aliases
 alias ll='ls -la'
+alias gis='git status'
+alias gil='git log'
 
 # Command Options
 export GREP_OPTIONS='--color=auto'
