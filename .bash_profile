@@ -1,4 +1,4 @@
-export PS1="\[\033[0;32m\]\u@\h \w\n\$\[\033[0m\]"
+export PS1="\[\033[0;37m\033[46m\]\u@\h \w\[\033[0m\]\n\$"
 export HISTCONTROL=ignoreboth
 export HISTSIZE=50000
 set completion-ignore-case on
