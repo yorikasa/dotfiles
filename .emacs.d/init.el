@@ -33,6 +33,9 @@
 (setq initial-scratch-message nil)
 (setq inhibit-startup-message t)
 
+;; Transmit Remote Edit Fix
+(setq backup-by-copying t)
+
 
 ;; Silent
 (setq ring-bell-function 'ignore)
@@ -62,11 +65,17 @@
 (setq auto-save-file-name-transforms
 	  `((".*" , "~/.emacs.d/backups/" t)))
 
+;; Theme
+(require 'color-theme-subdued)
+(color-theme-subdued)
+
+;; Highlight
+(global-hl-line-mode 1)
+(set-face-background hl-line-face "#111111")
+
 
 ;; For Terminal
 (unless window-system
-  (global-hl-line-mode 1)
-  (set-face-background hl-line-face "#111111")
   (menu-bar-mode 0)
   )
 
@@ -83,14 +92,6 @@
 
   (add-hook 'minibuffer-setup-hook 'mac-change-language-to-us)
 
-  ;; Theme
-  (require 'color-theme-subdued)
-  (color-theme-subdued)
-
-  ;; Highlight
-  (global-hl-line-mode 1)
-  (set-face-background hl-line-face "#111111")
-
   ;; Window size
   (add-to-list 'default-frame-alist '(width . 80))
   (add-to-list 'default-frame-alist '(height . 50))
@@ -103,6 +104,18 @@
   (scroll-bar-mode 0)
 
   )
+
+
+;; Show characters count on mode line
+(defun count-lines-and-chars ()
+  (if mark-active
+      (format "%d chars "
+              
+              (- (region-end) (region-beginning)))
+    ""))
+
+(add-to-list 'default-mode-line-format
+             '(:eval (count-lines-and-chars)))
 
 
 ;; =============================================================================
