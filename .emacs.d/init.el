@@ -102,7 +102,7 @@
   ;; UI
   (tool-bar-mode 0)
   (scroll-bar-mode 0)
-
+  (setq ns-pop-up-frames nil)
   )
 
 
