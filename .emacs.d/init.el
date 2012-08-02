@@ -207,7 +207,7 @@
 (when (executable-find "git")
   (require 'egg nil t))
 (setq egg-auto-update nil)
-(setq egg-switch-to-buffer nil)
+(setq egg-switch-to-buffer t)
 
 ;; Modes =======================================================================
 
