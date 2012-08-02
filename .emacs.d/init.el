@@ -51,7 +51,7 @@
 
 
 ;; Full screen patch
-(define-key global-map [(meta control f)] 'ns-toggle-fullscreen)
+(define-key global-map [C-s-268632070] 'ns-toggle-fullscreen)
 
 
 ;;misc
