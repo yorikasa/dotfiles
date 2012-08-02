@@ -10,12 +10,13 @@ alias ll='ls -la'
 alias gis='git status'
 alias gil='git log'
 alias giff='git diff'
+alias gicm='git commit -m'
 
 alias emacs="/usr/local/Cellar/emacs/24.1/Emacs.app/Contents/MacOS/Emacs -nw"
 
 # ENV
 export GREP_OPTIONS='--color=auto'
-export EDITOR=/opt/local/bin/emacs
+export EDITOR=/usr/local/bin/emacs
 
 # rbenv
 eval "$(rbenv init -)"
