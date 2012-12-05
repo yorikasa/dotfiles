@@ -1,0 +1,5 @@
+.DS_Store
+.emacs.d/ac-comphist.dat
+.emacs.d/backups
+.emacs.d/*~
+.emacs.d/auto-save-list
