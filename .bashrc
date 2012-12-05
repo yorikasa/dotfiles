@@ -8,11 +8,11 @@ export PATH=$HOME/.rbenv/bin:$PATH
 # Aliases
 alias ll='ls -la'
 alias gis='git status'
-alias gil='git log'
+alias gil='git log --oneline'
 alias giff='git diff'
 alias gicm='git commit -m'
 
-alias emacs="/usr/local/Cellar/emacs/24.1/Emacs.app/Contents/MacOS/Emacs -nw"
+alias emacs="/usr/local/Cellar/emacs/24.2/Emacs.app/Contents/MacOS/Emacs -nw"
 
 # ENV
 export GREP_OPTIONS='--color=auto'
