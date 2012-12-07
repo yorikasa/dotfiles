@@ -8,7 +8,7 @@ export PATH=$HOME/.rbenv/bin:$PATH
 # Aliases
 alias ll='ls -la'
 alias gis='git status'
-alias gil='git log --oneline'
+alias gil='git log --graph --oneline --decorate --all'
 alias giff='git diff'
 alias gicm='git commit -m'
 
