@@ -1,3 +1,9 @@
+if [ `uname` = "Darwin" ]; then
+	alias emacs="/usr/local/Cellar/emacs/24.2/Emacs.app/Contents/MacOS/Emacs -nw"
+elif [ `uname` = "Linux" ]; then
+	:
+fi
+
 function parse_git_branch {
 	git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/'
 }
@@ -16,11 +22,9 @@ alias gil='git log --graph --oneline --decorate --all'
 alias giff='git diff'
 alias gicm='git commit -m'
 
-alias emacs="/usr/local/Cellar/emacs/24.2/Emacs.app/Contents/MacOS/Emacs -nw"
-
 # ENV
 export GREP_OPTIONS='--color=auto'
-export EDITOR=/usr/local/bin/emacs
+export EDITOR='emacs'
 
 # rbenv
 eval "$(rbenv init -)"
