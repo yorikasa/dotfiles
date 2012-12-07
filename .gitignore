@@ -3,3 +3,4 @@
 .emacs.d/backups
 .emacs.d/*~
 .emacs.d/auto-save-list
+.emacs.d/elisp/*.elc
