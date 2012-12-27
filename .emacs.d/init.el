@@ -225,3 +225,12 @@
 
 ;; PHP -------------------------------------------------------------------------
 (require 'php-mode)
+
+
+;; CSS -------------------------------------------------------------------------
+(add-hook 'css-mode-hook (lambda ()
+			(setq autopair-dont-activate t)))
+(setq cssm-indent-level 4)
+(setq cssm-newline-before-closing-bracket t)
+(setq cssm-indent-function #'cssm-c-style-indenter)
+(setq cssm-mirror-mode t)
