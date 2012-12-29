@@ -53,6 +53,8 @@
 ;; Full screen patch
 (define-key global-map [C-s-268632070] 'ns-toggle-fullscreen)
 
+;; Buffer auto reload
+(global-auto-revert-mode 1)
 
 ;;misc
 (set-default 'cursor-type 'bar)
