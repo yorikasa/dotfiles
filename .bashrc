@@ -1,9 +1,4 @@
-# function parse_git_branch {
-# 	git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/'
-# }
-
-# export PS1="\e[0;37m\e[46m\u@\h \w\[\e[m \e[0;36m\$(parse_git_branch)\e[m\n\$"
-export PS1="\e[0;37m\e[46m\u@\h \w\[\e[m \e[0;36m\e[m\n\$"
+export PS1="\e[39m\e[48;5;33m\u@\h \w\e[0m\n\$"
 export HISTCONTROL=ignoreboth
 export HISTSIZE=50000
 set completion-ignore-case on
