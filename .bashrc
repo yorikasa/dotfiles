@@ -12,6 +12,7 @@ set completion-ignore-case on
 alias ll='ls -la'
 alias gis='git status'
 alias gil='git log --graph --oneline --decorate --all'
+alias gic='git checkout'
 alias giff='git diff'
 alias gicm='git commit -m'
 
