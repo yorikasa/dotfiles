@@ -52,10 +52,6 @@
 
 (set-default 'truncate-lines t)
 
-
-;; Full screen patch
-(define-key global-map [C-s-268632070] 'ns-toggle-fullscreen)
-
 ;; Buffer auto reload
 (global-auto-revert-mode 1)
 
@@ -84,38 +80,11 @@
   (menu-bar-mode 0)
   )
 
-
-;; For Emacs.app
-(when window-system
-  ;; Font
-  (set-face-attribute 'default nil
-					  :family "Menlo"
-					  :height 110)
-
-  (set-fontset-font nil 'japanese-jisx0208
-					(font-spec :family "Hiragino Kaku Gothic ProN"))
-
-  (add-hook 'minibuffer-setup-hook 'mac-change-language-to-us)
-
-  ;; Window size
-  (add-to-list 'default-frame-alist '(width . 80))
-  (add-to-list 'default-frame-alist '(height . 55))
-
-  ;; line-spacing!!!
-  (setq-default line-spacing 1)
-  
-  ;; UI
-  (tool-bar-mode 0)
-  (scroll-bar-mode 0)
-  (setq ns-pop-up-frames nil)
-  )
-
-
 ;; Show characters count on mode line
 (defun count-lines-and-chars ()
   (if mark-active
       (format "%d chars "
-              
+
               (- (region-end) (region-beginning)))
     ""))
 
@@ -192,22 +161,6 @@
 (setq auto-mode-alist (cons '("\\.md" . markdown-mode) auto-mode-alist))
 
 
-;; AUCTeX ----------------------------------------------------------------------
-(require 'tex-site)
-(require 'tex)
-
-;;  (setq TeX-default-mode 'japanese-Latex-mode)
-;;  (setq japanese-Latex-default-style "jsarticle")
-;;  (setq japanese-TeX-command-default "pTeX")
-;;  (setq japanese-LaTeX-command-default "pLaTeX")
-;;  (add-to-list 'TeX-output-view-style
-;;               '("^dvi$" "." "dvipdfmx %dS %d && open %s.pdf"))
-
-
-;; Redo+ -----------------------------------------------------------------------
-;; (require 'redo+)
-
-
 ;; Egg (Git): https://github.com/byplayer/egg ----------------------------------
 (when (executable-find "git")
   (require 'egg nil t))
@@ -219,18 +172,8 @@
 ;; Ruby ------------------------------------------------------------------------
 (setq ruby-indent-level 4)
 
-;; Flymake
-;; (defun flymake-ruby-init()
-;;   (list "ruby" (list "-c" (flymake-init-create-temp-buffer-copy
-;; 						   'flymake-create-temp-inplace))))
-;; (add-to-list 'flymake-allowed-file-name-masks
-;; 			 '("\\.rb\\'" flymake-ruby-init))
-;; (add-to-list 'flymake-err-line-patterns
-;; 			 '("\\(.*\\):(\\([0-9]+\\)): \\(.*\\)" 1 2 nil 3))
-
 ;; PHP -------------------------------------------------------------------------
 (require 'php-mode)
-
 
 ;; CSS -------------------------------------------------------------------------
 (add-hook 'css-mode-hook (lambda ()
