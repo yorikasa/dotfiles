@@ -50,6 +50,9 @@
 (setq mouse-wheel-scroll-amount '(0.01))
 
 
+(set-default 'truncate-lines t)
+
+
 ;; Full screen patch
 (define-key global-map [C-s-268632070] 'ns-toggle-fullscreen)
 
@@ -96,7 +99,7 @@
 
   ;; Window size
   (add-to-list 'default-frame-alist '(width . 80))
-  (add-to-list 'default-frame-alist '(height . 50))
+  (add-to-list 'default-frame-alist '(height . 55))
 
   ;; line-spacing!!!
   (setq-default line-spacing 1)
@@ -193,16 +196,16 @@
 (require 'tex-site)
 (require 'tex)
 
- (setq TeX-default-mode 'japanese-Latex-mode)
- (setq japanese-Latex-default-style "jsarticle")
- (setq japanese-TeX-command-default "pTeX")
- (setq japanese-LaTeX-command-default "pLaTeX")
- (add-to-list 'TeX-output-view-style
-              '("^dvi$" "." "dvipdfmx %dS %d && open %s.pdf"))
+;;  (setq TeX-default-mode 'japanese-Latex-mode)
+;;  (setq japanese-Latex-default-style "jsarticle")
+;;  (setq japanese-TeX-command-default "pTeX")
+;;  (setq japanese-LaTeX-command-default "pLaTeX")
+;;  (add-to-list 'TeX-output-view-style
+;;               '("^dvi$" "." "dvipdfmx %dS %d && open %s.pdf"))
 
 
 ;; Redo+ -----------------------------------------------------------------------
-(require 'redo+)
+;; (require 'redo+)
 
 
 ;; Egg (Git): https://github.com/byplayer/egg ----------------------------------
