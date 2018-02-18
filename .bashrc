@@ -11,7 +11,7 @@ alias gis='git status'
 alias gil='git log --graph --oneline --decorate --all'
 alias gic='git checkout'
 alias giff='git diff'
-alias gicm='git commit -m'
+alias gicm='git commit -am'
 
 source ~/.git-completion.bash
 
