@@ -18,5 +18,7 @@ Simply run `setup.sh` do the job (maybe).
     - some terminal configuration
 - `.gitconfig`
     - git configuration
+- `git-completion.bash`
+    - git completion for bash
 - `setup.sh`
     - Copy files above to the home directory.
