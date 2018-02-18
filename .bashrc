@@ -5,11 +5,15 @@ set completion-ignore-case on
 
 # Aliases
 alias ll='ls -la'
+
+# Git
 alias gis='git status'
 alias gil='git log --graph --oneline --decorate --all'
 alias gic='git checkout'
 alias giff='git diff'
 alias gicm='git commit -m'
+
+source ~/.git-completion.bash
 
 # ENV
 export GREP_OPTIONS='--color=auto'
