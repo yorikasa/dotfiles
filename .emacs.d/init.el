@@ -88,7 +88,7 @@
               (- (region-end) (region-beginning)))
     ""))
 
-(add-to-list 'default-mode-line-format
+(add-to-list 'mode-line-format
              '(:eval (count-lines-and-chars)))
 
 
