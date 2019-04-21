@@ -5,3 +5,11 @@ ln -s $(pwd)/.inputrc ~/.inputrc
 ln -s $(pwd)/.gitconfig ~/.gitconfig
 ln -s $(pwd)/.gitignore_global ~/.gitignore_global
 ln -s $(pwd)/git-completion.bash ~/.git-completion.bash
+
+if [ ! -d ~/.lldb ]; then
+	mkdir ~/.lldb
+fi
+ln -s $(pwd)/.lldb-script ~/.lldb/script
+
+ln -s $(pwd)/.lldbinit ~/.lldbinit
+ln -s $(pwd)/.lldbinit-Xcode ~/.lldbinit-Xcode
