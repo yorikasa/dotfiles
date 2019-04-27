@@ -1,4 +1,9 @@
-export PS1="\e[39m\e[48;5;33m\u@\h \w\e[0m\n\$"
+source ~/.git-completion.bash
+source ~/.git-prompt.sh
+
+export GIT_PS1_SHOWDIRTYSTATE=true
+
+export PS1="\e[39m\e[48;5;33m\u@\h \w\e[0m$(__git_ps1 " %s")\n\$"
 export HISTCONTROL=ignoreboth
 export HISTSIZE=50000
 set completion-ignore-case on
@@ -12,8 +17,6 @@ alias gil='git log --graph --oneline --decorate --all'
 alias gic='git checkout'
 alias giff='git diff'
 alias gicm='git commit -am'
-
-source ~/.git-completion.bash
 
 # ENV
 export GREP_OPTIONS='--color=auto'
