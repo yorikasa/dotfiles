@@ -1,16 +1,13 @@
-ln -s $(pwd)/.emacs.d ~/.emacs.d
-ln -s $(pwd)/.bashrc ~/.bashrc
-ln -s $(pwd)/.bash_profile ~/.bash_profile
-ln -s $(pwd)/.inputrc ~/.inputrc
-ln -s $(pwd)/.gitconfig ~/.gitconfig
-ln -s $(pwd)/.gitignore_global ~/.gitignore_global
-ln -s $(pwd)/.git-prompt.sh ~/.git-prompt.sh
-ln -s $(pwd)/git-completion.bash ~/.git-completion.bash
+ln -Fns $(pwd)/.emacs.d ~/.emacs.d
+ln -Fns $(pwd)/.bashrc ~/.bashrc
+ln -Fns $(pwd)/.bash_profile ~/.bash_profile
+ln -Fns $(pwd)/.inputrc ~/.inputrc
 
-if [ ! -d ~/.lldb ]; then
-	mkdir ~/.lldb
-fi
-ln -s $(pwd)/.lldb-script ~/.lldb/script
+ln -Fns $(pwd)/.gitconfig ~/.gitconfig
+ln -Fns $(pwd)/.gitignore_global ~/.gitignore_global
+ln -Fns $(pwd)/.git-prompt.sh ~/.git-prompt.sh
+ln -Fns $(pwd)/.git-completion.bash ~/.git-completion.bash
 
-ln -s $(pwd)/.lldbinit ~/.lldbinit
-ln -s $(pwd)/.lldbinit-Xcode ~/.lldbinit-Xcode
+ln -Fns $(pwd)/.lldb ~/.lldb
+ln -Fns $(pwd)/.lldbinit ~/.lldbinit
+ln -Fns $(pwd)/.lldbinit-Xcode ~/.lldbinit-Xcode
