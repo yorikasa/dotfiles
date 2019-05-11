@@ -1,4 +1,4 @@
-source ~/.git-completion.bash
+[ -f /usr/local/etc/bash_completion ] && . /usr/local/etc/bash_completion
 source ~/.git-prompt.sh
 
 export GIT_PS1_SHOWDIRTYSTATE=true

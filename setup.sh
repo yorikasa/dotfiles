@@ -6,7 +6,6 @@ ln -Fns $(pwd)/.inputrc ~/.inputrc
 ln -Fns $(pwd)/.gitconfig ~/.gitconfig
 ln -Fns $(pwd)/.gitignore_global ~/.gitignore_global
 ln -Fns $(pwd)/.git-prompt.sh ~/.git-prompt.sh
-ln -Fns $(pwd)/.git-completion.bash ~/.git-completion.bash
 
 ln -Fns $(pwd)/.lldb ~/.lldb
 ln -Fns $(pwd)/.lldbinit ~/.lldbinit
