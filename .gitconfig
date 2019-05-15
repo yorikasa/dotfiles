@@ -3,3 +3,7 @@
 # Please adapt and uncomment the following lines:
 name = Yuki Orikasa
 email = yuki.wter@gmail.com
+
+[alias]
+discardall = reset --hard HEAD
+discardfile = checkout HEAD --
