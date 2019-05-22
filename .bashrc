@@ -19,14 +19,14 @@ alias gicm='git commit -am'
 
 function gil () {
     tput rmam
-    git log $1 --graph --decorate --date=format:"%Y-%m-%d %a %H:%M:%S" \
+    git log $@ --graph --decorate --date=format:"%Y-%m-%d %a %H:%M:%S" \
     --format=format:"%C(auto)%h%Creset %s%w(80,8,8)%C(auto)%n%-D%Creset%n%C(dim white)%ad by %an%Creset%n"
     tput smam
 }
 
 function gill () {
     tput rmam
-    git log --graph --decorate --format=format:'%w(80,0,8)%C(auto)%h %s%n%-D%Creset'
+    git log $@ --graph --decorate --format=format:'%w(80,0,8)%C(auto)%h %s%n%-D%Creset'
     tput smam
 }
 
