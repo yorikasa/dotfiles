@@ -13,7 +13,7 @@ alias ll='ls -la'
 # Git
 alias gis='git status'
 alias gic='git checkout'
-alias gib='git branch'
+alias gib='git branch --sort=-committerdate'
 alias giff='git diff'
 alias gicm='git commit -am'
 
