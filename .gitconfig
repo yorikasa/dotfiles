@@ -8,4 +8,4 @@ email = yuki.wter@gmail.com
 discardall = reset --hard HEAD
 discardfile = checkout HEAD --
 
-today = log --oneline --all --author='Yuki\\sOrikasa' --since=yesterday --format=format:'- [x] %s'
+today = log --oneline --all --author='Yuki\\sOrikasa' --since='6am' --format=format:'- [x] %s'
