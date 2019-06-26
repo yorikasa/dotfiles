@@ -16,6 +16,7 @@ alias gic='git checkout'
 alias gib='git branch --sort=-committerdate'
 alias giff='git diff'
 alias gicm='git commit -am'
+alias stashes='git stash list'
 
 function gil () {
     tput rmam
