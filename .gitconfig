@@ -10,3 +10,12 @@ discardfile = checkout HEAD --
 c = checkout
 
 today = log --oneline --all --author='Yuki\\sOrikasa' --since='6am' --format=format:'- [x] %s'
+
+[filter "lfs"]
+clean = git-lfs clean -- %f
+smudge = git-lfs smudge -- %f
+process = git-lfs filter-process
+required = true
+
+# workaround for: https://stackoverflow.com/questions/5074136/git-rebase-fails-your-local-changes-to-the-following-files-would-be-overwritte
+trustctime = false
