@@ -31,6 +31,17 @@ function gill () {
     tput smam
 }
 
+function recordsimulator() {
+  echo Select simulator:
+  list=$(xcrun simctl list | grep Booted | nl)
+  echo "$list"
+  read num
+  device=$(echo "$list" | awk -v num=$num '/Booted/{i++}i==num{print; exit}')
+  regex="\(([^(^)]*)\)[[:space:]]?\(Booted\)[[:space:]]?$"
+  if [[ $device =~ $regex ]]; then deviceid=${BASH_REMATCH[1]}; fi
+  xcrun simctl io $deviceid recordVideo "~/Desktop/Recorded $(date "+%F %R").mp4"
+}
+
 # ENV
 export GREP_OPTIONS='--color=auto'
 export EDITOR='emacs'
