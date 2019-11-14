@@ -33,7 +33,7 @@ function gill () {
 
 function recordsimulator() {
   echo Select simulator:
-  list=$(xcrun simctl list | grep Booted | nl)
+  list=$(xcrun simctl list | grep Booted | nl -w 2)
   echo "$list"
   read num
   device=$(echo "$list" | awk -v num=$num '/Booted/{i++}i==num{print; exit}')
