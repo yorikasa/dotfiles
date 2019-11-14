@@ -1,4 +1,0 @@
-command source ~/.lldbinit
-
-expr -l objc -- @import UIKit
-command script import ~/.lldb/script/nudge.py
