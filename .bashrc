@@ -39,7 +39,27 @@ function recordsimulator() {
   device=$(echo "$list" | awk -v num=$num '/Booted/{i++}i==num{print; exit}')
   regex="\(([^(^)]*)\)[[:space:]]?\(Booted\)[[:space:]]?$"
   if [[ $device =~ $regex ]]; then deviceid=${BASH_REMATCH[1]}; fi
-  xcrun simctl io $deviceid recordVideo "~/Desktop/Recorded $(date "+%F %R").mp4"
+  filepath="~/Desktop/Recorded $(date "+%F %H.%M.%S").mp4"
+  sec=5
+  while [ $sec -gt 0 ]; do
+     echo -ne "📹 start in $sec seconds... \r"
+     sleep 1
+     : $((sec--))
+  done
+  echo -ne "🔴 Recording... Ctrl+C to Stop.         \r"
+  xcrun simctl io $deviceid recordVideo "$filepath"
+  echo -ne "                                     \r"
+  echo -e "\nVideo saved to $filepath"
+}
+
+function giffen() {
+  if [ -z "$1" ]; then echo '🙏 Usage: giffen <file path>'; return; fi
+  echo -n 'size? (just press Enter: 320) : '
+  read size
+  if [ -z "$size" ]; then size=320; fi
+  regex="(.+)\.(.+)$"
+  if [[ $1 =~ $regex ]]; then filename=${BASH_REMATCH[1]}; fi
+  ffmpeg -i "$1" -vf "fps=10,scale=$size:-1:flags=lanczos,split[s0][s1];[s0]palettegen[p];[s1][p]paletteuse" -loop 0 "${filename}.gif"
 }
 
 # ENV
